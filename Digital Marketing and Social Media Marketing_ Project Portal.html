@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Marketing and Social Media Marketing: Project Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6FA;--surface:#fff;--ink:#16213A;--muted:#55607A;--line:#D9E0EB;--accent:#C8235D;--soft:#FBE3EC;--teal:#0B7F77;--tsoft:#DDF3F0;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1626;--surface:#17203A;--ink:#E8ECF5;--muted:#9AA5BF;--line:#2A3552;--accent:#FF7AA5;--soft:#3A1F2E;--teal:#4FD1C5;--tsoft:#14343A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1626;--surface:#17203A;--ink:#E8ECF5;--muted:#9AA5BF;--line:#2A3552;--accent:#FF7AA5;--soft:#3A1F2E;--teal:#4FD1C5;--tsoft:#14343A;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.75rem;font-weight:700}
+h3{font-size:1.1rem;font-weight:500}
+p{margin:0 0 1em;max-width:68ch}
+.shell{display:grid;grid-template-columns:250px 1fr;max-width:1180px;margin:0 auto}
+nav{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;height:100vh;padding:28px 20px;border-right:1px solid var(--line);overflow:auto}
+nav b{font-family:"Bricolage Grotesque",sans-serif;display:block;margin-bottom:16px;font-size:1.05rem}
+nav a{display:block;padding:7px 10px;border-radius:6px;color:var(--muted);text-decoration:none;font-size:.95rem}
+nav a:hover,nav a:focus-visible{background:var(--soft);color:var(--ink);outline:none}
+nav a:focus-visible{outline:2px solid var(--accent)}
+main{padding:40px 36px 80px;min-width:0}
+section{padding:36px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border:0}
+.hero{padding-top:8px}
+.lede{font-size:1.15rem;color:var(--muted)}
+.funnel{display:grid;gap:6px;margin:28px 0 0;max-width:560px}
+.funnel div{padding:10px 14px;border-radius:6px;color:#fff;font-weight:500;font-size:.95rem}
+.funnel div:nth-child(1){width:100%;background:#C8235D}
+.funnel div:nth-child(2){width:80%;background:#A31C4D}
+.funnel div:nth-child(3){width:60%;background:#7E163C}
+.funnel div:nth-child(4){width:42%;background:#5A102B}
+.funnel span{opacity:.85;font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.box p{margin:0;font-size:.95rem;color:var(--muted)}
+.box h3{margin-bottom:.35em}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.tabs button{font:inherit;font-size:.95rem;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-top:10px}
+.panel dl{margin:0;display:grid;grid-template-columns:130px 1fr;gap:8px 14px}
+.panel dt{font-weight:500}
+.panel dd{margin:0;color:var(--muted)}
+.steps{list-style:none;counter-reset:s;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px 14px 58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:500;font-size:.9rem}
+.steps b{font-weight:500}
+.scroll{overflow-x:auto;margin-top:16px}
+table{border-collapse:collapse;width:100%;min-width:520px;background:var(--surface);border:1px solid var(--line)}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.95rem;vertical-align:top}
+th{background:var(--tsoft);font-weight:500}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-top:16px;max-width:560px}
+.calc .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.calc label{display:block;font-size:.88rem;color:var(--muted)}
+.calc input{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.calc input:focus-visible{outline:2px solid var(--accent)}
+.calc output{display:block;margin-top:14px;font-family:"Bricolage Grotesque",sans-serif;font-size:1.4rem;color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.pro{border-left:4px solid var(--teal)}.con{border-left:4px solid var(--accent)}
+ul.tight{margin:0;padding-left:1.1em}
+footer{color:var(--muted);font-size:.9rem;padding-top:24px}
+@media (max-width:820px){
+.shell{display:block}
+nav{position:sticky;top:0;height:auto;z-index:5;background:var(--bg);display:flex;gap:4px;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 8px) 12px 8px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav b{display:none}
+nav a{flex:none}
+main{padding:24px 16px 60px}
+.two{grid-template-columns:1fr}
+.panel dl{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav aria-label="Project chapters">
+<b>Project portal</b>
+<a href="#intro">1. Introduction</a>
+<a href="#digital">2. Digital marketing</a>
+<a href="#social">3. Social media marketing</a>
+<a href="#platforms">4. Platforms</a>
+<a href="#strategy">5. Strategy steps</a>
+<a href="#metrics">6. Metrics</a>
+<a href="#cases">7. Case studies</a>
+<a href="#issues">8. Trends and challenges</a>
+<a href="#conclusion">9. Conclusion</a>
+</nav>
+<main>
+
+<section id="intro" class="hero">
+<h1>Digital Marketing and Social Media Marketing</h1>
+<p class="lede">How businesses find, win and keep customers online, and how social platforms became the busiest place to do it.</p>
+<div class="funnel" aria-label="Marketing funnel">
+<div>Awareness <span>people discover the brand</span></div>
+<div>Interest <span>they engage and compare</span></div>
+<div>Purchase <span>they buy or sign up</span></div>
+<div>Loyalty <span>they return and recommend</span></div>
+</div>
+<p style="margin-top:24px">Marketing is the work of understanding what customers need and offering it to them in a way that persuades. Traditional marketing relied on print, radio, television and hoardings. Digital marketing moves the same goals onto the internet, where audiences can be targeted precisely and results can be measured within hours instead of months.</p>
+<p><b>Objectives of this project:</b> explain the main digital channels, study social media marketing in depth, outline how a campaign is planned and measured, and look at real examples and current challenges.</p>
+</section>
+
+<section id="digital">
+<h2>Digital marketing</h2>
+<p>Digital marketing is the promotion of products, services or brands through internet-connected channels such as search engines, websites, email, apps and social platforms. It reaches people where they already spend time, and it lets a small business compete with a large one on a modest budget.</p>
+<div class="grid">
+<div class="box"><h3>Search engine optimisation (SEO)</h3><p>Improving a website so it ranks higher in unpaid search results. It relies on useful content, relevant keywords, fast pages and links from trusted sites.</p></div>
+<div class="box"><h3>Search engine marketing (SEM)</h3><p>Paying to appear at the top of search results. Advertisers usually pay only when someone clicks, which is called pay-per-click.</p></div>
+<div class="box"><h3>Content marketing</h3><p>Creating blogs, videos, guides and podcasts that answer customers’ questions and build trust before any sale.</p></div>
+<div class="box"><h3>Email marketing</h3><p>Sending newsletters, offers and reminders to people who have agreed to hear from the brand. It is cheap and has a high return when the list is well managed.</p></div>
+<div class="box"><h3>Affiliate and influencer marketing</h3><p>Partners or creators promote a product and earn a commission or fee for the sales or attention they bring.</p></div>
+<div class="box"><h3>Social media marketing</h3><p>Using social platforms to build awareness, community and sales. It is covered in detail in the next chapter.</p></div>
+</div>
+<h3 style="margin-top:28px">Traditional and digital marketing compared</h3>
+<div class="scroll"><table>
+<tr><th>Point</th><th>Traditional</th><th>Digital</th></tr>
+<tr><td>Cost</td><td>High, with fixed rates for space and airtime</td><td>Flexible, can start with a small budget</td></tr>
+<tr><td>Targeting</td><td>Broad, by location or channel</td><td>Precise, by interest, age, behaviour and location</td></tr>
+<tr><td>Measurement</td><td>Slow and approximate</td><td>Real-time and detailed</td></tr>
+<tr><td>Interaction</td><td>One-way</td><td>Two-way, customers can reply and share</td></tr>
+</table></div>
+</section>
+
+<section id="social">
+<h2>Social media marketing</h2>
+<p>Social media marketing (SMM) is the use of platforms such as Instagram, Facebook, LinkedIn, YouTube and X to share content, talk with customers and drive them toward a purchase. Unlike an advertisement on television, a social post can be liked, commented on and shared, so the audience helps spread the message.</p>
+<div class="grid">
+<div class="box"><h3>Organic social</h3><p>Free posts, stories, reels and replies that build a community over time.</p></div>
+<div class="box"><h3>Paid social</h3><p>Sponsored posts and ads shown to chosen audiences, with a budget and a clear goal.</p></div>
+<div class="box"><h3>Influencer marketing</h3><p>Creators with a loyal following recommend the product to people who trust them.</p></div>
+<div class="box"><h3>Social customer care</h3><p>Answering questions and complaints publicly and quickly, which shapes the brand’s reputation.</p></div>
+</div>
+<div class="two">
+<div class="box pro"><h3>Advantages</h3><ul class="tight"><li>Large, active audiences</li><li>Targeting by interest and behaviour</li><li>Direct feedback from customers</li><li>Low cost to begin</li><li>Content can spread through shares</li></ul></div>
+<div class="box con"><h3>Limitations</h3><ul class="tight"><li>Algorithms change and reduce reach</li><li>Negative comments become public</li><li>Needs constant, fresh content</li><li>Results can be hard to link to sales</li><li>Privacy rules limit data use</li></ul></div>
+</div>
+</section>
+
+<section id="platforms">
+<h2>Choosing a platform</h2>
+<p>Each platform suits a different audience and type of content. Select a platform to see how businesses use it.</p>
+<div class="tabs" role="tablist" aria-label="Platforms" id="tabs"></div>
+<div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<section id="strategy">
+<h2>Planning a social media campaign</h2>
+<p>A successful campaign follows a clear order of work. Skipping the early steps usually leads to posts that look good but sell nothing.</p>
+<ol class="steps">
+<li><b>Set goals.</b> Decide what success means, for example 500 new followers or 100 website sign-ups in a month. Make goals specific and measurable.</li>
+<li><b>Know the audience.</b> Describe who the customers are, what they care about and which platforms they use.</li>
+<li><b>Research competitors.</b> Study what similar brands post and what gets a strong response.</li>
+<li><b>Choose platforms and content types.</b> Match formats such as reels, carousels, polls and live videos to the audience.</li>
+<li><b>Build a content calendar.</b> Plan topics, dates and times so posting stays regular.</li>
+<li><b>Set a budget.</b> Divide money between creating content, paid promotion and tools.</li>
+<li><b>Publish and engage.</b> Post on schedule and reply to comments and messages quickly.</li>
+<li><b>Measure and improve.</b> Review the numbers, keep what works and change what does not.</li>
+</ol>
+</section>
+
+<section id="metrics">
+<h2>Measuring results</h2>
+<p>Metrics show whether a campaign is working. Choose the ones that match the goal, because a high follower count alone does not guarantee sales.</p>
+<div class="scroll"><table>
+<tr><th>Metric</th><th>Meaning</th><th>How it is calculated</th></tr>
+<tr><td>Reach</td><td>Unique people who saw the content</td><td>Reported by the platform</td></tr>
+<tr><td>Impressions</td><td>Total times the content was shown</td><td>Reported by the platform</td></tr>
+<tr><td>Engagement rate</td><td>How actively people respond</td><td>(Likes + comments + shares) ÷ followers × 100</td></tr>
+<tr><td>Click-through rate (CTR)</td><td>Share of viewers who clicked</td><td>Clicks ÷ impressions × 100</td></tr>
+<tr><td>Conversion rate</td><td>Share of visitors who buy or sign up</td><td>Conversions ÷ visitors × 100</td></tr>
+<tr><td>Cost per click (CPC)</td><td>Price paid for each click</td><td>Ad spend ÷ clicks</td></tr>
+<tr><td>Return on investment (ROI)</td><td>Profit compared with cost</td><td>(Revenue − cost) ÷ cost × 100</td></tr>
+</table></div>
+<h3 style="margin-top:28px">Try it: engagement rate calculator</h3>
+<div class="calc">
+<div class="row">
+<div><label for="f">Followers</label><input id="f" type="number" min="0" value="5000"></div>
+<div><label for="l">Likes</label><input id="l" type="number" min="0" value="320"></div>
+<div><label for="c">Comments</label><input id="c" type="number" min="0" value="45"></div>
+<div><label for="s">Shares</label><input id="s" type="number" min="0" value="30"></div>
+</div>
+<output id="out" aria-live="polite"></output>
+</div>
+</section>
+
+<section id="cases">
+<h2>Case studies</h2>
+<div class="grid">
+<div class="box"><h3>Dove: Real Beauty (2004 onward)</h3><p>Dove built a long-running campaign around showing women of many shapes, ages and skin tones instead of conventional models. Its films were shared widely online, and the campaign is often cited as an example of purpose-led, shareable content.</p></div>
+<div class="box"><h3>ALS Ice Bucket Challenge (2014)</h3><p>People filmed themselves being doused with ice water, donated, and nominated friends. It spread through social sharing and raised large donations for ALS charities, showing how participation drives reach.</p></div>
+<div class="box"><h3>Your own example</h3><p>Add one local or Indian brand you follow, such as a food, fashion or education brand. Describe its platforms, content style and what results it seems to get. Verify any figures from the brand’s own pages.</p></div>
+</div>
+</section>
+
+<section id="issues">
+<h2>Trends and challenges</h2>
+<div class="two">
+<div class="box"><h3>Current trends</h3><ul class="tight"><li>Short-form video such as reels and shorts</li><li>Artificial intelligence for content ideas, ad targeting and chat support</li><li>Social commerce, buying directly inside apps</li><li>Creator and micro-influencer partnerships</li><li>Voice and visual search</li></ul></div>
+<div class="box"><h3>Challenges</h3><ul class="tight"><li>Data privacy laws and consent</li><li>Fake followers and misleading influencer claims</li><li>Ad fatigue and crowded feeds</li><li>Fast reactions needed to online criticism</li><li>Keeping up with algorithm changes</li></ul></div>
+</div>
+</section>
+
+<section id="conclusion">
+<h2>Conclusion</h2>
+<p>Digital marketing has changed how brands and customers meet. Search, content, email and social media each play a part, and social media adds conversation and community that older channels could not offer. Businesses that set clear goals, understand their audience, publish useful content and measure results can grow steadily even with a small budget. As technology and rules change, marketers must keep learning and treat customers’ attention and data with care.</p>
+<footer>
+<p><b>Bibliography.</b> List the books, websites and reports you used. Good starting points are the official help and learning pages of Google, Meta and LinkedIn, plus a standard marketing textbook recommended by your teacher.</p>
+</footer>
+</section>
+
+</main>
+</div>
+<script>
+(function(){
+var P={
+"Instagram":{best:"Visual brands such as fashion, food, travel and lifestyle",fmt:"Reels, stories, carousels, photos",aud:"Mainly younger adults",tip:"Short, eye-catching reels and consistent visuals build recognition."},
+"Facebook":{best:"Local businesses, communities and events",fmt:"Posts, groups, live video, ads",aud:"Wide range of ages",tip:"Groups and local pages help with customer questions and word of mouth."},
+"LinkedIn":{best:"B2B companies, recruitment and professional services",fmt:"Articles, posts, documents, company pages",aud:"Professionals and decision makers",tip:"Share expertise and company news to build credibility."},
+"YouTube":{best:"Tutorials, reviews, entertainment and long-term search traffic",fmt:"Long videos, shorts, live streams",aud:"Very broad",tip:"Videos stay searchable for years, so clear titles and descriptions matter."},
+"X":{best:"News, quick updates and customer support",fmt:"Short posts, threads, polls",aud:"News followers and opinion leaders",tip:"Speed and a clear brand voice matter most."}
+};
+var tabs=document.getElementById("tabs"),panel=document.getElementById("panel"),names=Object.keys(P);
+function show(n){
+Array.prototype.forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.textContent===n?"true":"false")});
+var d=P[n];
+panel.innerHTML="<dl><dt>Best for</dt><dd>"+d.best+"</dd><dt>Content formats</dt><dd>"+d.fmt+"</dd><dt>Audience</dt><dd>"+d.aud+"</dd><dt>Tip</dt><dd>"+d.tip+"</dd></dl>";
+}
+names.forEach(function(n){
+var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=n;
+b.addEventListener("click",function(){show(n)});tabs.appendChild(b);
+});
+show(names[0]);
+var ids=["f","l","c","s"].map(function(i){return document.getElementById(i)}),out=document.getElementById("out");
+function calc(){
+var v=ids.map(function(e){return parseFloat(e.value)||0});
+if(v[0]<=0){out.textContent="Enter followers above zero.";return}
+out.textContent="Engagement rate: "+(((v[1]+v[2]+v[3])/v[0])*100).toFixed(2)+"%";
+}
+ids.forEach(function(e){e.addEventListener("input",calc)});calc();
+})();
+</script>
+</body>
+</html>
